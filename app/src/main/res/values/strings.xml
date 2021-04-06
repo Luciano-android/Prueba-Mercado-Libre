@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PruebaMercadoLibre</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_hint">Que Desea Buscar.</string>
+    <string name="acepts_mercadopago">Acepta Mercado Pago.</string>
+    <string name="declines_mercadopago">Mercado Pago no disponible.</string>
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">Un error Inesperado Ocurrio. \n Disculpa por el Inconveniente.</string>
+    <string name="customactivityoncrash_error_activity_restart_app">Reiniciar App</string>
+    <string name="customactivityoncrash_error_activity_close_app">Cerrar app</string>
+    <string name="customactivityoncrash_error_activity_error_details">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">Close</string>
+    <string name="customactivityoncrash_error_activity_error_details_copy">Copy to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_copied">Copied to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_clipboard_label">Error information</string>
+    <string name="search_vacio">Por favor Introdusca lo que quiere buscar.</string>
+    <string name="no_internet_access">No tiene Acceso a Internet</string>
+    <string name="unidades_disponibles">\" Unidades Disponibles\"</string>
+</resources>
