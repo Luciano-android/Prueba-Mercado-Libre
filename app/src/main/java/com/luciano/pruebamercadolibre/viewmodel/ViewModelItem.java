@@ -53,9 +53,9 @@ public class ViewModelItem extends ViewModel {
                 }
 
                 @Override
-                public void onError(String error) {
+                public void onError() {
                     isLoading.setValue(false);
-                    onError.setValue(error);
+                    onError.setValue(context.getString(R.string.fallo_la_conexion));
                 }
             });
         }else {

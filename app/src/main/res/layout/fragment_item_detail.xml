@@ -62,6 +62,7 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/fragmentItemDetail_textViewAceptMercadoPago"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewPrecioItem"
             tools:text="items disponibles" />
@@ -78,6 +79,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewItemDisponible"
             tools:text="Mercadopago" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

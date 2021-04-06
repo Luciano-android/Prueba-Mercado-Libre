@@ -26,6 +26,8 @@
         android:textColorHint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:imeOptions="actionSearch"
+            android:inputType="text"
             android:id="@+id/fragmentSearchList_textInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,6 +35,7 @@
             android:textColorHint="@color/black"
             android:backgroundTint="@color/light_gray"
             android:layout_gravity="center"
+            android:maxLines="1"
             />
     </com.google.android.material.textfield.TextInputLayout>
 

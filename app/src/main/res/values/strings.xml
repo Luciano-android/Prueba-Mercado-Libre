@@ -16,4 +16,5 @@
     <string name="search_vacio">Por favor Introdusca lo que quiere buscar.</string>
     <string name="no_internet_access">No tiene Acceso a Internet</string>
     <string name="unidades_disponibles">\" Unidades Disponibles\"</string>
+    <string name="fallo_la_conexion">Fallo de conexion</string>
 </resources>

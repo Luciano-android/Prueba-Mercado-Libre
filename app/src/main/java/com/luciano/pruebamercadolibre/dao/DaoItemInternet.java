@@ -2,6 +2,7 @@ package com.luciano.pruebamercadolibre.dao;
 
 import android.util.Log;
 
+import com.luciano.pruebamercadolibre.R;
 import com.luciano.pruebamercadolibre.model.Item;
 import com.luciano.pruebamercadolibre.service.ItemResponse;
 import com.luciano.pruebamercadolibre.service.ItemService;
@@ -28,12 +29,12 @@ public class DaoItemInternet extends DaoHelper {
             public void onResponse(Call<ItemResponse> call, Response<ItemResponse> response) {
                 if (response.isSuccessful())
                     controllerListener.finish(response.body().getItems());
-                else controllerListener.onError("Fallo de conexion");
+                else controllerListener.onError();
             }
 
             @Override
             public void onFailure(Call<ItemResponse> call, Throwable t) {
-                controllerListener.onError("Fallo de conexion");
+                controllerListener.onError();
                 Log.d("Fail_To_Call_Query", t.toString());
             }
         });
