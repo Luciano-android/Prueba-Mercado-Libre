@@ -5,6 +5,7 @@ public class Transactions {
 
     public Transactions() {
     }
+
     public Integer getTotal() {
         return total;
     }

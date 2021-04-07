@@ -23,9 +23,6 @@ public class Item implements Serializable {
     public Item() {
     }
 
-    public String getId() {
-        return id;
-    }
 
     public String getTitle() {
         return title;

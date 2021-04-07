@@ -10,8 +10,9 @@ public class ItemResponse {
     @SerializedName("results")
     private List<Item> itemList;
 
-    public ItemResponse(){
+    public ItemResponse() {
     }
+
     public List<Item> getItems() {
         return itemList;
     }

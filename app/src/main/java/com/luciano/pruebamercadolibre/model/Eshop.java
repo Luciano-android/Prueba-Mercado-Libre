@@ -10,6 +10,7 @@ public class Eshop {
 
     public Eshop() {
     }
+
     public String getNombre() {
         return nombre;
     }

@@ -7,7 +7,7 @@ public abstract class DaoHelper {
     public Retrofit retrofit;
     public static final String BASE_URL = "https://api.mercadolibre.com/";
 
-    public DaoHelper(){
+    public DaoHelper() {
         retrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())

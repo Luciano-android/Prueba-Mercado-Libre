@@ -7,9 +7,9 @@ import android.view.inputmethod.InputMethodManager;
 
 public class Keyboard {
 
-    public static void showSoftKeyboard(Activity activity, View view){
-        if(view.requestFocus()){
-            ((InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE))
+    public static void showSoftKeyboard(Activity activity, View view) {
+        if (view.requestFocus()) {
+            ((InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE))
                     .toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
         }
     }

@@ -1,13 +1,12 @@
 package com.luciano.pruebamercadolibre.view.adapter;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
-import com.luciano.pruebamercadolibre.R;
 import com.luciano.pruebamercadolibre.databinding.CeldaItemBinding;
 import com.luciano.pruebamercadolibre.model.Item;
+import com.luciano.pruebamercadolibre.utils.Utils;
 
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -18,7 +17,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterHolder> {
-
 
     private List<Item> listaDeItems;
     private ItemAdapterListener itemAdapterListener;
@@ -47,7 +45,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterHol
         return listaDeItems.size();
     }
 
-    protected class ItemAdapterHolder extends RecyclerView.ViewHolder{
+    protected class ItemAdapterHolder extends RecyclerView.ViewHolder {
         private final CeldaItemBinding binding;
 
         public ItemAdapterHolder(CeldaItemBinding binding) {
@@ -58,20 +56,21 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterHol
                 itemAdapterListener.itemAdapterOnClickItem(item);
             });
         }
-        public void setData(Item item){
-            DecimalFormat decimalFormat = new DecimalFormat("#,###.##", DecimalFormatSymbols.getInstance(Locale.GERMANY));
+
+        public void setData(Item item) {
             binding.nombreItemTextViewCeldaItem.setText(item.getTitle());
-            binding.precioItemTextViewCeltaItem.setText(decimalFormat.format(item.getPrice())+ " " + item.getCurrency_id());
+            binding.precioItemTextViewCeltaItem.setText(Utils.getFormatedNumber(item.getPrice()) + " " + item.getCurrency_id());
             Glide.with(binding.getRoot().getContext())
                     .load(item.getThumbnail())
                     .into(binding.imageItemImageViewCeldaItem);
         }
     }
 
-    public interface ItemAdapterListener{
+    public interface ItemAdapterListener {
         void itemAdapterOnClickItem(Item item);
     }
-    public void setListaDeItemsActualizada(List<Item> listaDeItemsActualizada){
+
+    public void setListaDeItemsActualizada(List<Item> listaDeItemsActualizada) {
         listaDeItems = listaDeItemsActualizada;
         notifyDataSetChanged();
     }

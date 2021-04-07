@@ -41,8 +41,8 @@ public class ViewModelItem extends ViewModel {
         return onError;
     }
 
-    public void searchItems (String query, Context context){
-        if(Utils.checkInternet(context)){
+    public void searchItems(String query, Context context) {
+        if (Utils.checkInternet(context)) {
             isLoading.setValue(true);
             DaoItemInternet daoItemInternet = new DaoItemInternet();
             daoItemInternet.getItemList(query, new ResultListener<List<Item>>() {
@@ -58,7 +58,7 @@ public class ViewModelItem extends ViewModel {
                     onError.setValue(context.getString(R.string.fallo_la_conexion));
                 }
             });
-        }else {
+        } else {
             onError.setValue(context.getString(R.string.no_internet_access));
         }
     }
