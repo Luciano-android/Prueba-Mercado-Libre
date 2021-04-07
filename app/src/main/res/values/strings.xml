@@ -15,6 +15,10 @@
     <string name="customactivityoncrash_error_activity_error_details_clipboard_label">Error information</string>
     <string name="search_vacio">Por favor Introdusca lo que quiere buscar.</string>
     <string name="no_internet_access">No tiene Acceso a Internet</string>
-    <string name="unidades_disponibles">\" Unidades Disponibles\"</string>
+    <string name="unidades_disponibles">\ Unidades Disponibles</string>
     <string name="fallo_la_conexion">Fallo de conexion</string>
+    <string name="informacion_del_vendedor">Informacion Del Vendedor</string>
+    <string name="no_hay_unidades_disponibles">No hay unidades Disponibles</string>
+    <string name="envio_gratuito">Envio gratuito.</string>
+    <string name="cantidad_unidades_vendidas">" Unidades Vendidas"</string>
 </resources>

@@ -9,7 +9,10 @@ import com.luciano.pruebamercadolibre.R;
 import com.luciano.pruebamercadolibre.databinding.CeldaItemBinding;
 import com.luciano.pruebamercadolibre.model.Item;
 
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.List;
+import java.util.Locale;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -56,8 +59,9 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemAdapterHol
             });
         }
         public void setData(Item item){
+            DecimalFormat decimalFormat = new DecimalFormat("#,###.##", DecimalFormatSymbols.getInstance(Locale.GERMANY));
             binding.nombreItemTextViewCeldaItem.setText(item.getTitle());
-            binding.precioItemTextViewCeltaItem.setText(item.getPrice().toString() + " " + item.getCurrency_id());
+            binding.precioItemTextViewCeltaItem.setText(decimalFormat.format(item.getPrice())+ " " + item.getCurrency_id());
             Glide.with(binding.getRoot().getContext())
                     .load(item.getThumbnail())
                     .into(binding.imageItemImageViewCeldaItem);

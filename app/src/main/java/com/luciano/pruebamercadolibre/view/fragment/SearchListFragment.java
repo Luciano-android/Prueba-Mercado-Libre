@@ -38,16 +38,17 @@ public class SearchListFragment extends Fragment implements ItemAdapter.ItemAdap
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         binding = FragmentSearchListBinding.inflate(inflater, container, false);
 
         setUpRecycler();
-        Keyboard.showSoftKeyboard(getActivity(),binding.fragmentSearchListTextInputEditText);
+        binding.fragmentSearchListTextInputEditText.requestFocus();
 
         viewModelItem = new ViewModelProvider(requireActivity()).get(ViewModelItem.class);
         setUpObservers();

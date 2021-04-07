@@ -14,10 +14,10 @@
 
         <ImageView
             android:id="@+id/fragmentItemDetail_imageViewImagenItem"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="15dp"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/fragmentItemDetail_textViewPrecioItem"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,11 +28,11 @@
             android:id="@+id/fragmentItemDetail_textViewNombreItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/fragmentItemDetail_imageViewImagenItem"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,10 +43,10 @@
             android:id="@+id/fragmentItemDetail_textViewPrecioItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
             android:textColor="@color/green"
             android:textSize="25sp"
-            app:layout_constraintBottom_toTopOf="@+id/fragmentItemDetail_textViewItemDisponible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_imageViewImagenItem"
@@ -57,15 +57,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="10dp"
             android:textColor="@color/light_blue"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/fragmentItemDetail_textViewAceptMercadoPago"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewPrecioItem"
             tools:text="items disponibles" />
+
+        <TextView
+            android:id="@+id/fragmentItemDetail_textViewEnvioGratis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/light_blue"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fragmentItemDetail_textViewAceptMercadoPago"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewItemDisponible"
+            tools:text="envio Gratis"
+            />
 
         <TextView
             android:id="@+id/fragmentItemDetail_textViewAceptMercadoPago"
@@ -77,8 +91,67 @@
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewItemDisponible"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewEnvioGratis"
             tools:text="Mercadopago" />
+        <TextView
+            android:id="@+id/fragmentItemDetail_textViewInformacionDelVendedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/informacion_del_vendedor"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItemDetail_textViewAceptMercadoPago"
+            />
+
+        <TextView
+            android:id="@+id/fragmentItemDetail_textViewNombreDelNegocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItemDetail_textViewInformacionDelVendedor"
+            tools:text="nombredelnegocio" />
+
+        <ImageView
+            android:id="@+id/fragmentItemDetail_imageViewImagenLogoVendedor"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fragmentItemDetail_textViewNombreDelNegocio"
+            app:layout_constraintTop_toBottomOf="@id/fragmentItemDetail_textViewInformacionDelVendedor"/>
+
+        <TextView
+            android:id="@+id/fragmentItemDetail_textViewTotalVendidos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewNombreDelNegocio"
+            tools:text="totalVendidos" />
+        <TextView
+            android:id="@+id/fragmentItemDetail_textViewLocalizacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/light_blue"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentItemDetail_textViewTotalVendidos"
+            tools:text="Localizacion" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

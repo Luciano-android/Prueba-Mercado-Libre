@@ -10,6 +10,7 @@ import com.luciano.pruebamercadolibre.utils.ResultListener;
 
 import java.util.List;
 
+import androidx.annotation.NonNull;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,14 +27,14 @@ public class DaoItemInternet extends DaoHelper {
     public void getItemList(String query, final ResultListener<List<Item>> controllerListener) {
         itemService.getItems(query).enqueue(new Callback<ItemResponse>() {
             @Override
-            public void onResponse(Call<ItemResponse> call, Response<ItemResponse> response) {
+            public void onResponse(@NonNull Call<ItemResponse> call,@NonNull Response<ItemResponse> response) {
                 if (response.isSuccessful())
                     controllerListener.finish(response.body().getItems());
                 else controllerListener.onError();
             }
 
             @Override
-            public void onFailure(Call<ItemResponse> call, Throwable t) {
+            public void onFailure(@NonNull Call<ItemResponse> call,@NonNull Throwable t) {
                 controllerListener.onError();
                 Log.d("Fail_To_Call_Query", t.toString());
             }

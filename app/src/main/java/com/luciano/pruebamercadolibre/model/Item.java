@@ -3,18 +3,22 @@ package com.luciano.pruebamercadolibre.model;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class Item implements Serializable {
 
     private String id;
     private String title;
-    @SerializedName("price")   // aca va lo de json
-    private Double price;      // nombre que yo quiero perro.
+    private Double price;
     private String currency_id;
     private Boolean accepts_mercadopago;
     private Integer available_quantity;
     private String thumbnail;
+    @SerializedName("seller")
+    private Seller seller;
+    @SerializedName("address")
+    private Adress adress;
+    @SerializedName("shipping")
+    private Shipping envio;
 
     public Item() {
     }
@@ -45,5 +49,17 @@ public class Item implements Serializable {
 
     public String getThumbnail() {
         return thumbnail;
+    }
+
+    public Seller getSeller() {
+        return seller;
+    }
+
+    public Adress getAdress() {
+        return adress;
+    }
+
+    public Shipping getEnvio() {
+        return envio;
     }
 }

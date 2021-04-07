@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.luciano.pruebamercadolibre.model.Item;
+import com.luciano.pruebamercadolibre.utils.Keyboard;
 import com.luciano.pruebamercadolibre.view.fragment.ItemDetailFragment;
 import com.luciano.pruebamercadolibre.view.fragment.SearchListFragment;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements SearchListFragmen
         setContentView(R.layout.activity_main);
 
         firstFragment(new SearchListFragment());
+
 
     }
 
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements SearchListFragmen
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fragmentContainerMainActivity, fragment);
         fragmentTransaction.commit();
+        Keyboard.showSoftKeyboard(this,findViewById(R.id.fragmentContainerMainActivity));
     }
     private void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
